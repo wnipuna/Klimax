@@ -1,0 +1,127 @@
+header {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+header .nav-links,
+header .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .logo-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+}
+
+header nav {
+  z-index: 100;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+header nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+header nav .nav-links .nav-link {
+  position: relative;
+  top: 25%;
+  color: #5f5f79;
+  font-size: 17px;
+  text-decoration: none;
+  padding-right: 2vw;
+  padding-left: 2vh;
+}
+
+header nav .nav-links li {
+  border-left: 2px solid #5f5f79;
+}
+
+header nav .nav-links .button-poptavka {
+  background-color: #1a94d3;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 17px;
+  border-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav .nav-links > li {
+  display: inline-block;
+  margin-left: -5px;
+}
+
+header nav li:hover > a {
+  background: #bec9d8;
+  cursor: pointer;
+}
+
+header nav .subMenu {
+  padding-top: 3vh;
+  position: absolute;
+  display: none;
+}
+
+header nav .subMenu a {
+  margin: 0;
+  text-align: center;
+  color: #5f5f79;
+  padding: 12px 15px 12px 15px;
+  background: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+
+header nav .subMenu li {
+  border: none;
+  position: relative;
+}
+
+header nav .nav-links > li:hover .subMenu {
+  display: block;
+}
+
+header nav .SuperSubMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  display: none;
+}
+
+header nav .subMenu li:hover > .SuperSubMenu {
+  display: block;
+}
+/*# sourceMappingURL=header.css.map */

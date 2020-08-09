@@ -1,0 +1,21 @@
+.header-rectangle {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(235, 235, 235);
+    top: 0px;
+    width: 100vw;
+    height: 50px;
+    .call-icon{
+        float: right; 
+        margin-top: 12.5px;
+        vertical-align: middle;
+    }
+    .number{
+        text-align: right;
+        vertical-align: middle;
+        line-height: 50px;
+        margin-left: 15px;
+        margin-right: 5px;
+    } 
+  }

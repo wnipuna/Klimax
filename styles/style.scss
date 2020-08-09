@@ -1,0 +1,161 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@mixin responsive {
+  @media screen and (max-width: 980px) {
+    @content;
+  }  
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  @include responsive(){
+    background-color: #1a94d3;
+  }
+}
+
+.back-container {
+  z-index: -10;
+  position: relative;
+  overflow: visible;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+}
+
+.shape-container {
+  z-index: -5;
+  position: relative;
+  img {
+    position: absolute;
+    left: -400px;
+    top: 100px;
+    width: 150%;
+    height: auto;
+    opacity: 1;
+  }
+  @include responsive(){
+    img{
+      visibility: hidden;
+    }
+  }
+}
+
+
+@import './header-rectangle';
+
+@mixin button-prop ($backgroundclr, $textclr, $width, $height){
+  background-color: $backgroundclr;
+  color: $textclr;
+  width: $width;
+  height: $height;
+}
+
+@import './header.scss';
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+@import './presentation';
+
+.cover {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+  height: 100vh;
+  img {
+    height: 100%;
+    filter: drop-shadow(0px 2px 0px black);
+    @include responsive(){
+      height: 70%;
+    }
+  }
+}
+
+.button-vyhody {
+  @include button-prop(#1a94d3,white,370px,60px);
+  border-radius: 5px;
+  font-size: 20px;
+  border-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include responsive(){
+    @include button-prop(#ffffff,#1a94d3,300px,50px);
+  }
+}
+
+.distribute{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  .product-logo{
+    height: 100px;
+    @include responsive(){
+      margin-top: 40px;
+  }
+  }
+  li{
+    border-right: 2px solid white;
+    @include responsive(){
+      border-bottom: 2px solid white;
+  }
+    p{
+      @include responsive(){
+        color: black;
+    }
+    }
+  }
+  @include responsive(){
+    flex-direction: column;
+}
+}
+
+.button-chci {
+  @include button-prop(transparent,white,250px,50px);
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.product-text{
+  color: white;
+  font-size: 22px;
+}
+
+button:focus {outline:0;}
+
+.client{
+  margin-top: 250px;
+  margin-bottom: 50px;
+  font-size: 46px;
+  font-weight: 600;
+  word-spacing: 10px;
+  font-family: hind;
+  @include responsive(){
+    margin-top: 100px;
+    font-size: 32px;
+    word-spacing: 5px;
+}
+}
+
+@import './carousel'
+
